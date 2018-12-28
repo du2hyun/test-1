@@ -1,15 +1,17 @@
-#include <stdio.h>
+#!/bin/bash
 
-int main()
-{
-  int i,j;
-  for (i = 0; i < 5; i++) {
-    for (j = 0; j < 9; j++) {
-      printf("%dx%d=%d ", i, j, i * j);
-    }
-  }
-  
-  return 0;
-}
+x=1
 
-// comment
+while [ '$x' -le 9 ]
+do
+	y=1
+
+	while [ '$y' -le 9 ]
+	do
+		echo "$x * $y = 'expr $x \* $y'"
+		y='expr $y + 1'
+	done
+
+	x='expr $x + 1'
+done
+
